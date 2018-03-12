@@ -1,6 +1,6 @@
 package top.kiswich.codebuilder.service;
 
-import top.kiswich.codebuilder.pojo.base.Database;
+import top.kiswich.codebuilder.pojo.base.webFormat.Database;
 import top.kiswich.codebuilder.pojo.base.beforeparse.DatabaseInfo;
 
 /**

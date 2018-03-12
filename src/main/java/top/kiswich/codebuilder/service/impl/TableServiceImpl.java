@@ -3,7 +3,7 @@ package top.kiswich.codebuilder.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import top.kiswich.codebuilder.pojo.base.beforeparse.ColumnInfo;
-import top.kiswich.codebuilder.pojo.base.Database;
+import top.kiswich.codebuilder.pojo.base.webFormat.Database;
 import top.kiswich.codebuilder.pojo.base.beforeparse.DatabaseInfo;
 import top.kiswich.codebuilder.pojo.base.beforeparse.TableInfo;
 import top.kiswich.codebuilder.pojo.common.SqlConstant;

@@ -1,8 +1,11 @@
-package top.kiswich.codebuilder.pojo.base;
+package top.kiswich.codebuilder.pojo.base.webFormat;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * 前端传来的json
  */
+@JsonIgnoreProperties
 public class Database {
     private String host;
     private String port;
