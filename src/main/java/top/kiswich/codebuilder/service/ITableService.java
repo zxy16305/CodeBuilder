@@ -2,6 +2,7 @@ package top.kiswich.codebuilder.service;
 
 import top.kiswich.codebuilder.pojo.base.webFormat.Database;
 import top.kiswich.codebuilder.pojo.base.beforeparse.DatabaseInfo;
+import top.kiswich.codebuilder.pojo.base.webFormat.TableMapping;
 
 /**
  * JDBC查表封装
@@ -16,5 +17,10 @@ public interface ITableService {
      */
     public void getTables(Database database) throws Exception;
 
+
+    /**
+     * 将前端的表表映射关系转换为后端可以调用的映射关系
+     */
+    public void setMapping();
 
 }

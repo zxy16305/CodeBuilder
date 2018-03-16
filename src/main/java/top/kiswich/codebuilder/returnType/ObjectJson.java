@@ -9,16 +9,16 @@ public class ObjectJson {
     private Integer code;
 
     public ObjectJson() {
-        code = ResulrCode.SUCC;
+        code = ResultCode.SUCC;
     }
 
     public ObjectJson(Object data) {
-        code = ResulrCode.SUCC;
+        code = ResultCode.SUCC;
         this.data = data;
     }
 
     public ObjectJson(String mess) {
-        code = ResulrCode.SUCC;
+        code = ResultCode.SUCC;
         this.mess = mess;
     }
 

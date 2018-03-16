@@ -9,6 +9,10 @@ package template;
  *  repository.ftl      : JPA模板
  *  serviceImpl.ftl     : Service实现类模板
  *
+ * 对于前端的操作，不过是提交数据库的相关信息
+ * 然后再提供数据库的相关字段的映射关系
+ *
+ *
  */
 public class TemplateStandard {
 }

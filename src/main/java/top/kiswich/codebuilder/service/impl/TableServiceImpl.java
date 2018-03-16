@@ -6,6 +6,7 @@ import top.kiswich.codebuilder.pojo.base.beforeparse.ColumnInfo;
 import top.kiswich.codebuilder.pojo.base.webFormat.Database;
 import top.kiswich.codebuilder.pojo.base.beforeparse.DatabaseInfo;
 import top.kiswich.codebuilder.pojo.base.beforeparse.TableInfo;
+import top.kiswich.codebuilder.pojo.base.webFormat.TableMapping;
 import top.kiswich.codebuilder.pojo.common.SqlConstant;
 import top.kiswich.codebuilder.pojo.common.TableConstant;
 import top.kiswich.codebuilder.service.IMysqlService;
@@ -31,9 +32,7 @@ public class TableServiceImpl implements ITableService {
 
     @Override
     public void getTables(Database database) throws Exception {
-
         Connection connect = mysqlService.getConnect(Integer.parseInt(database.getPort()), database.getHost(), database.getDbName(), database.getUsername(), database.getPassword());
-
         try {
             String ColumnName = sqlService.getShowtablesColun(database.getDbName());
             ArrayList<String> tableNames = new ArrayList<>();
@@ -66,7 +65,6 @@ public class TableServiceImpl implements ITableService {
                         tableInfo.getColumnInfos().add(columnInfo);
 
                         for (String columnName : this.tableInfo) {
-
                             String string = resultSet.getString(columnName);
                             switch (columnName) {
                                 case TableConstant.COMMENT:
@@ -83,7 +81,6 @@ public class TableServiceImpl implements ITableService {
                                     break;
                             }
                         }
-
                     }
                 } finally {
                     if (resultSet != null) resultSet.close();
@@ -93,6 +90,15 @@ public class TableServiceImpl implements ITableService {
         } finally {
             if (connect != null) connect.close();
         }
+
+    }
+
+    /**
+     * 将前端的表表映射关系转换为后端可以调用的映射关系
+     */
+    @Override
+    public void setMapping() {
+
 
     }
 }

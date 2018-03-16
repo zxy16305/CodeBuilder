@@ -20,29 +20,12 @@ import java.util.List;
 
 @SpringBootApplication
 @EnableJpaRepositories("top.kiswich.codebuilder.dao")
-public class CodeBuilderApplication implements CommandLineRunner {
+public class CodeBuilderApplication {
 
 	public static void main(String[] args) throws ClassNotFoundException {
 		Class.forName("com.mysql.jdbc.Driver");
 		ConfigurableApplicationContext run = SpringApplication.run(CodeBuilderApplication.class, args);
-
 	}
 
 
-
-	@Override
-	public void run(String... args) throws Exception {
-		List<String> tables = new ArrayList<>();
-
-		Connection connection = DriverManager.getConnection("jdbc:mysql:///DB_TEST", "root", "root");
-		PreparedStatement showTables = connection.prepareStatement("show tables");
-		ResultSet resultSet = showTables.executeQuery();
-		while (resultSet.next()){
-			tables.add(resultSet.getString("Tables_in_"+"DB_TEST".toLowerCase()));
-		}
-
-		System.out.println(Arrays.toString(tables.toArray()));
-
-
-	}
 }

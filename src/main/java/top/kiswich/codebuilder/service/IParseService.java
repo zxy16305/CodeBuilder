@@ -14,7 +14,7 @@ public interface IParseService {
      * @param tableName
      * @return
      */
-    public String parseTableName(String tableName);
+    public String parseTableName(String tableName) throws Exception;
 
     /**
      * 将字段名转换成属性名
