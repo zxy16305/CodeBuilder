@@ -3,8 +3,7 @@ package top.kiswich.codebuilder.service.impl;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
-import top.kiswich.codebuilder.pojo.base.afterparse.DatabaseFilling;
+import top.kiswich.codebuilder.pojo.base.afterparse.table.DatabaseFilling;
 import top.kiswich.codebuilder.pojo.base.beforeparse.DatabaseInfo;
 import top.kiswich.codebuilder.service.IParseService;
 

@@ -7,6 +7,7 @@ import top.kiswich.codebuilder.pojo.base.webFormat.Database;
 import top.kiswich.codebuilder.pojo.base.beforeparse.DatabaseInfo;
 import top.kiswich.codebuilder.pojo.base.beforeparse.TableInfo;
 import top.kiswich.codebuilder.pojo.base.webFormat.TableMapping;
+import top.kiswich.codebuilder.pojo.base.webFormat.TableMappingContainer;
 import top.kiswich.codebuilder.pojo.common.SqlConstant;
 import top.kiswich.codebuilder.pojo.common.TableConstant;
 import top.kiswich.codebuilder.service.IMysqlService;
@@ -29,6 +30,8 @@ public class TableServiceImpl implements ITableService {
     IMysqlService mysqlService;
     @Autowired
     List<String> tableInfo;
+    @Autowired
+    TableMappingContainer tableMappingContainer;
 
     @Override
     public void getTables(Database database) throws Exception {
@@ -98,7 +101,21 @@ public class TableServiceImpl implements ITableService {
      */
     @Override
     public void setMapping() {
+        TableMapping tableMapping = tableMappingContainer.getTableMapping();
+        tableMapping.getOneToOnes().forEach(oneToOne->{
 
+
+        });
+
+        tableMapping.getOneToManies().forEach(oneToMany->{
+
+
+        });
+
+        tableMapping.getManyToManies().forEach(manyToMany -> {
+
+
+        });
 
     }
 }

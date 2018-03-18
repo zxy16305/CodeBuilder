@@ -48,7 +48,8 @@ public class TableController {
      */
     @PostMapping("/mapping")
     public ObjectJson mappingData(@RequestBody TableMapping tableMapping){
-        tableService.setMapping(tableMapping);
+        tableMappingContainer.setTableMapping(tableMapping);
+        tableService.setMapping();
         return new ObjectJson();
     }
 
@@ -58,6 +59,7 @@ public class TableController {
      */
     @GetMapping("/showing")
     public ObjectJson showCodes(){
+
         return new ObjectJson();
     }
 

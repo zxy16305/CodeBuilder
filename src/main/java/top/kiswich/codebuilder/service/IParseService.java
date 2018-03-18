@@ -1,6 +1,6 @@
 package top.kiswich.codebuilder.service;
 
-import top.kiswich.codebuilder.pojo.base.afterparse.DatabaseFilling;
+import top.kiswich.codebuilder.pojo.base.afterparse.table.DatabaseFilling;
 
 /**
  * 有关于转换的业务逻辑
