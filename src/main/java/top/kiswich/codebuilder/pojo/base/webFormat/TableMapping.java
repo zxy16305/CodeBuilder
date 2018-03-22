@@ -7,6 +7,7 @@ import org.springframework.web.context.annotation.SessionScope;
 import top.kiswich.codebuilder.pojo.base.webFormat.in.ManyToMany;
 import top.kiswich.codebuilder.pojo.base.webFormat.in.OneToMany;
 import top.kiswich.codebuilder.pojo.base.webFormat.in.OneToOne;
+import top.kiswich.codebuilder.pojo.base.webFormat.in.TableNormal;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +78,7 @@ public class TableMapping {
     private List<OneToOne> oneToOnes;
     private List<OneToMany> oneToManies;
     private List<ManyToMany> manyToManies;
+    private List<TableNormal> normalTables;
 
     public TableMapping() {
         oneToOnes = new ArrayList<>();
@@ -105,6 +107,15 @@ public class TableMapping {
     }
 
     public void setManyToManies(List<ManyToMany> manyToManies) {
+
         this.manyToManies = manyToManies;
+    }
+
+    public List<TableNormal> getNormalTables() {
+        return normalTables;
+    }
+
+    public void setNormalTables(List<TableNormal> normalTables) {
+        this.normalTables = normalTables;
     }
 }
