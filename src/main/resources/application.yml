@@ -3,3 +3,9 @@ spring:
     url: jdbc:mysql:///DB_TEST
     username: root
     password: root
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+
+
