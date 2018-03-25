@@ -1,0 +1,93 @@
+localhost:8080/table
+
+{
+	"host":"localhost",
+	"port":"3306",
+	"username":"root",
+	"password":"root",
+	"dbName":"DB_MAPPING",
+
+	"thisPackage":"top.kiswich",
+	"author":"ZQW",
+	"email":"google@gmail.com"
+}
+
+
+localhost:8080/mapping
+
+{
+	"oneToOnes":[
+		{
+			"table":{
+				"tableId":"3",
+				"foreignKeyId":""
+			},
+			"holdTable":{
+				"tableId":"0",
+				"foreignKeyId":"1"
+			}
+		}
+	],
+	"oneToManies":[
+		{
+			"oneTable":{
+				"tableId":"1",
+				"foreignKeyId":""
+			},
+			"manyTable":{
+				"tableId":"1",
+				"foreignKeyId":"1"
+			}
+		}
+	],
+	"manyToManies":[
+		{
+			"table1":{
+				"tableId":"3",
+				"foreignKeyId":""
+			},
+			"table2":{
+				"tableId":"1",
+				"foreignKeyId":""
+			},
+			"tableMid":{
+				"tableId":"2",
+				"table1":{
+					"tableId":"0",
+					"foreignKeyId":"1"
+				},
+				"table2":{
+					"tableId":"0",
+					"foreignKeyId":"2"
+				}
+			}
+		}
+	],
+	"normalTables":[
+		{
+			"tableId":"0",
+			"foreignKeyId":"0"
+		},
+		{
+			"tableId":"0",
+			"foreignKeyId":"2"
+		},
+		{
+			"tableId":"1",
+			"foreignKeyId":"0"
+		},
+		{
+			"tableId":"1",
+			"foreignKeyId":"2"
+		},
+		{
+			"tableId":"3",
+			"foreignKeyId":"0"
+		},
+		{
+			"tableId":"3",
+			"foreignKeyId":"1"
+		}
+	
+	]
+}
