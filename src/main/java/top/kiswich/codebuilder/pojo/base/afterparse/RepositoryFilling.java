@@ -8,8 +8,10 @@ public class RepositoryFilling {
         return entityName;
     }
 
-    public void setEntityName(String entityName) {
+    public RepositoryFilling setEntityName(String entityName) {
         this.entityName = entityName;
+        return this;
+
     }
 
 

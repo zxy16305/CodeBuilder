@@ -1,6 +1,5 @@
 package top.kiswich.codebuilder;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import org.junit.Test;
@@ -21,7 +20,7 @@ public class MoBanTest {
     @Test
     public void testMuban() throws IOException, TemplateException {
 
-        InputStream resourceAsStream = this.getClass().getResourceAsStream("/template/pojo.ftl");
+        InputStream resourceAsStream = this.getClass().getResourceAsStream("/template/entity.ftl");
         Template template = new Template("entitydd", new InputStreamReader(resourceAsStream));
 
         EntityFilling entityFilling = new EntityFilling();
@@ -71,7 +70,7 @@ public class MoBanTest {
                         .setType("int")
                         .setUpperParamName("Id"))
                 .setNormalColumns(normalColumns)
-                .setOneToOnes(oneToOneFillings)
+//                .setOneToOnes(oneToOneFillings)
 //                .setOneToManies()
 //                .setManyToOnes()
 //                .setManyToManies()

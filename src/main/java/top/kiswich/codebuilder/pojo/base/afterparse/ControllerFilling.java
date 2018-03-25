@@ -8,15 +8,17 @@ public class ControllerFilling {
         return name;
     }
 
-    public void setName(String name) {
+    public ControllerFilling setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getUpperName() {
         return upperName;
     }
 
-    public void setUpperName(String upperName) {
+    public ControllerFilling setUpperName(String upperName) {
         this.upperName = upperName;
+        return this;
     }
 }

@@ -13,6 +13,10 @@ public class Database {
     private String password;
     private String dbName;
 
+    private String thisPackage;
+    private String author;
+    private String email;
+
     public String getHost() {
         return host;
     }
@@ -51,5 +55,29 @@ public class Database {
 
     public void setDbName(String dbName) {
         this.dbName = dbName;
+    }
+
+    public String getThisPackage() {
+        return thisPackage;
+    }
+
+    public void setThisPackage(String thisPackage) {
+        this.thisPackage = thisPackage;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

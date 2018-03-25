@@ -1,6 +1,6 @@
 package top.kiswich.codebuilder.pojo.base.afterparse;
 
-public class ServiceFilling {
+public class ServiceImplFilling {
     private String upperName;
 
     private String name;
@@ -9,7 +9,7 @@ public class ServiceFilling {
         return upperName;
     }
 
-    public ServiceFilling setUpperName(String upperName) {
+    public ServiceImplFilling setUpperName(String upperName) {
         this.upperName = upperName;
         return this;
     }
@@ -18,7 +18,7 @@ public class ServiceFilling {
         return name;
     }
 
-    public ServiceFilling setName(String name) {
+    public ServiceImplFilling setName(String name) {
         this.name = name;
         return this;
     }

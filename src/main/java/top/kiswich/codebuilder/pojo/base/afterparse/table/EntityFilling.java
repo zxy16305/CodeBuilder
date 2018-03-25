@@ -30,21 +30,22 @@ public class EntityFilling {
     //除去id和映射之外的字段
     private List<ColumnFilling> normalColumns;
 
-    private List<OneToOneFilling> oneToOnes;
+    private OneToOneFilling oneToOnes;
 
     private List<ManyToOneFilling> manyToOnes;
 
     private List<OneToManyFilling> oneToManies;
 
-    private List<ManyToManyFilling> manyToManies;
+    private ManyToManyFilling manyToManies;
 
 
     public EntityFilling() {
         normalColumns = new ArrayList<>();
-        oneToOnes = new ArrayList<>();
         manyToOnes = new ArrayList<>();
         oneToManies = new ArrayList<>();
-        manyToManies = new ArrayList<>();
+        manyToManies = new ManyToManyFilling();
+        oneToOnes = new OneToOneFilling();
+//        manyToManies = new ArrayList<>();
     }
 
     public String getDbName() {
@@ -92,11 +93,11 @@ public class EntityFilling {
         return this;
     }
 
-    public List<OneToOneFilling> getOneToOnes() {
+    public OneToOneFilling getOneToOnes() {
         return oneToOnes;
     }
 
-    public EntityFilling setOneToOnes(List<OneToOneFilling> oneToOnes) {
+    public EntityFilling setOneToOnes(OneToOneFilling oneToOnes) {
         this.oneToOnes = oneToOnes;
         return this;
     }
@@ -119,11 +120,11 @@ public class EntityFilling {
         return this;
     }
 
-    public List<ManyToManyFilling> getManyToManies() {
+    public ManyToManyFilling getManyToManies() {
         return manyToManies;
     }
 
-    public EntityFilling setManyToManies(List<ManyToManyFilling> manyToManies) {
+    public EntityFilling setManyToManies(ManyToManyFilling manyToManies) {
         this.manyToManies = manyToManies;
         return this;
     }

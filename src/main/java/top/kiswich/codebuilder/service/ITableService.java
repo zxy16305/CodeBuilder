@@ -1,5 +1,6 @@
 package top.kiswich.codebuilder.service;
 
+import top.kiswich.codebuilder.pojo.base.beforeparse.TableInfo;
 import top.kiswich.codebuilder.pojo.base.webFormat.Database;
 import top.kiswich.codebuilder.pojo.base.beforeparse.DatabaseInfo;
 import top.kiswich.codebuilder.pojo.base.webFormat.TableMapping;
@@ -22,5 +23,15 @@ public interface ITableService {
      * 将前端的表表映射关系转换为后端可以调用的映射关系
      */
     public void setMapping();
+
+    /**
+     * 清空之前的所有数据
+     */
+    public void clearAllData();
+
+    /**
+     * 清空匹配的数据
+     */
+    public void clearMapperData();
 
 }

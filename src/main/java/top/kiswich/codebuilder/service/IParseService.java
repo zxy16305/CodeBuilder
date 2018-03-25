@@ -1,6 +1,11 @@
 package top.kiswich.codebuilder.service;
 
-import top.kiswich.codebuilder.pojo.base.afterparse.table.DatabaseFilling;
+import top.kiswich.codebuilder.exception.NoTypeMatchException;
+import top.kiswich.codebuilder.pojo.base.afterparse.DatabaseFilling;
+import top.kiswich.codebuilder.pojo.base.afterparse.table.EntityFilling;
+
+import javax.swing.text.html.parser.Entity;
+import java.util.List;
 
 /**
  * 有关于转换的业务逻辑
@@ -14,7 +19,7 @@ public interface IParseService {
      * @param tableName
      * @return
      */
-    public String parseTableName(String tableName) throws Exception;
+    public String parseTableName(String tableName);
 
     /**
      * 将字段名转换成属性名
@@ -25,10 +30,20 @@ public interface IParseService {
     public String parseColumnName(String columnName);
 
     /**
-     * 直接从数据库中读取的表信息还不能明确表结构的关系
-     * 因此不能得出完美的JPA标准注解的vto
-     * 因此要在前端确认之后，将所得到的表结构关系传入后台
-     * 然后经过这个方法进行转换，将数据库得到的表信息转换成能够直接填装模板的信息
+     * 首字母小写
+     * @return
      */
-    public DatabaseFilling parse2Tamplate();
+    public String parseFirstLowName(String string);
+
+    /**
+     * 将数据库中读出的类型转换成java中的类型
+     * @param dataType
+     * @return
+     */
+    public String parseType(String dataType) throws NoTypeMatchException;
+
+    /**
+     * 假定之前已经获取了entity的信息，现在只需要通过entity，就能将所有的填充类填充完整
+     */
+    public DatabaseFilling parse2Tamplate(DatabaseFilling databaseFilling);
 }
