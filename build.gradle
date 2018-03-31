@@ -1,0 +1,33 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'top.kiswich'
+version = '0.0.1-SNAPSHOT'
+
+description = """code-builder"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+
+
+repositories {
+        
+     maven { url "http://repo1.maven.org/maven2" }
+     maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+     maven { url "http://192.168.103.133:8080/repository/internal" }
+     maven { url "http://192.168.103.133:8080/repository/snapshots" }
+     maven { url "https://repo.spring.io/milestone" }
+     maven { url "https://repo.spring.io/snapshot" }
+     maven { url "https://dl.bintray.com/rabbitmq/maven-milestones" }
+}
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version:'2.0.0.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version:'2.0.0.RELEASE'
+    compile group: 'org.freemarker', name: 'freemarker', version:'2.3.27-incubating'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version:'2.0.0.RELEASE'
+    runtime group: 'mysql', name: 'mysql-connector-java', version:'5.1.45'
+}
