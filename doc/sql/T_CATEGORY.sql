@@ -1,0 +1,11 @@
+# 模板类 id name userId
+
+DROP TABLE IF EXISTS T_CATEGORY;
+
+CREATE TABLE T_CATEGORY (
+  id     LONG                AUTO_INCREMENT PRIMARY KEY,
+  name   CHAR(128) NOT NULL  DEFAULT ''
+  COMMENT '类名',
+  userId LONG      NOT NULL  DEFAULT 0
+  COMMENT '所属用户'
+);

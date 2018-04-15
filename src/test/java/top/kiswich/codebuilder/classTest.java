@@ -7,6 +7,8 @@ import org.junit.Test;
 import top.kiswich.codebuilder.pojo.base.webFormat.TableMapping;
 import top.kiswich.codebuilder.pojo.base.webFormat.in.*;
 
+import java.util.Date;
+
 public class classTest {
     @Test
     public void testClass(){
@@ -34,6 +36,10 @@ public class classTest {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
+    }
 
+    @Test
+    public void testStringFormat() {
+        System.out.println(String.format("%tc", new Date()));
     }
 }
